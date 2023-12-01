@@ -6,6 +6,11 @@
 
 ⚠️ Project in development..
 
+### Screens project
+
+<img src="greeting.png" />
+
+
 ## 🚀 Getting Started
 
 First, run the development server:
