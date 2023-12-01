@@ -1,50 +1,49 @@
-# Portfolio Tayse {Code} Rosa
+# Hello, i'm Tayse {Code} Rosa
 
-Link do projeto em funcionamento: https://www.coderosa.tech	
+## This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-<img src="/images/portfolio.png" alt="Portfolio">
+### Status project
 
-> Portfolio www.coderosa.tech
+⚠️ Project in development..
 
-### Ajustes e melhorias
+## 🚀 Getting Started
 
-🟢 Projeto concluído:
+First, run the development server:
 
-## 💻 Pré-requisitos
-
-Antes de começar, verifique se você atendeu aos seguintes requisitos:
-
-- Você precisa para rodar este projeto, apenas de um navegador como o Google Chrome.
-
-
-## 🚀 Instalando Portfolio
-
-Para instalar o Portfolio, siga estas etapas:
-
-Linux e macOS:
-
-```
-git clone https://github.com/TayseRosa/coderosa.tech.git
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Windows:
-```
-git clone https://github.com/TayseRosa/coderosa.tech.git
-```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## ☕ Usando Portfolio
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Para usar Portfolio, siga estas etapas:
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-```
-Acessar a pasta coderosa.tech
-Duplo clique em index.html
-Testar no seu navegador favorito
-```
+## 🚀  Learn More
 
-## 📫 Contribuindo para Portfolio
+To learn more about Next.js, take a look at the following resources:
 
-Para contribuir com Portfolio, siga estas etapas:
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## 🚀  Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## 📫 Contribuindo para o Projeto
+
+Para contribuir com o Projeto, siga estas etapas:
 
 1. Bifurque este repositório.
 2. Crie um branch: `git checkout -b <nome_branch>`.
@@ -68,4 +67,4 @@ Como alternativa, consulte a documentação do GitHub em [como criar uma solicit
   </tr>
 </table>
 
-Copyright :copyright: 2023 · Feito com por ❤️ Tayse Rosa · JS Drums
+Copyright :copyright: 2023 · Feito com por ❤️ Tayse Rosa
