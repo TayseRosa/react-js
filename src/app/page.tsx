@@ -1,21 +1,20 @@
-import { Square, Circle } from "./components/Geometria";
-import { Card } from "./components/Card";
+import { peopleList } from "@/data/peopleList";
 
-function Page(){
-  return (
+const Page = () => {
+
+  const list = peopleList.map(person => <li> {person.name} </li>)
+
+  return(
     <div>
+      <h1 className="font-bold text-2xl" >Olá mundo</h1>
+      <h3>Algum outro texto</h3>
 
-      <Card>
-        <>
-          <h3 className="text-3xl font-bold italic">Frase de efeito!</h3>
-          <p className="text-right text-sm">-Autor desconhecido.</p>
-          <Circle />
-        </>
-      </Card>
+      <ul>
+        {list}
+      </ul>
+
     </div>
-
-  )
+  );
 }
-
 
 export default Page;
