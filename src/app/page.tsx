@@ -1,14 +1,19 @@
 import { Square, Circle } from "./components/Geometria";
+import { Card } from "./components/Card";
 
 function Page(){
   return (
     <div>
-      <h1 className="font-bold text-2xl text-yellow-500"> Olá mundo! </h1>
-      <h2> Olá mundo2! </h2>
 
-      <Square />
-      <Circle />
+      <Card>
+        <>
+          <h3 className="text-3xl font-bold italic">Frase de efeito!</h3>
+          <p className="text-right text-sm">-Autor desconhecido.</p>
+          <Circle />
+        </>
+      </Card>
     </div>
+
   )
 }
 
