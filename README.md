@@ -72,4 +72,4 @@ Como alternativa, consulte a documentação do GitHub em [como criar uma solicit
   </tr>
 </table>
 
-Copyright :copyright: 2023 · Made with ❤️ by sTayse Rosa
+Copyright :copyright: 2023 · Made with ❤️ by Tayse Rosa
