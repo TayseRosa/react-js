@@ -1,15 +1,19 @@
-import { EmojiRating } from "./components/EmojiRating";
+"use client"
+
+import { CustomButton } from "./components/CustomButton";
 
 const Page = () => {
+
+  const handleButton1 = () => alert('Clicou no botão 1');
+  const handleButton2 = () => alert('Clicou no botão 2');
+  const handleButton3 = () => alert('Clicou no botão 3');
   
   return(
-    <div className="w-screen h-screen flex justify-center items-center flex-col text-white
-    bg-gradient-to-r from-sky-500 to-indigo-500">
-      <EmojiRating rate={1} />
-
-      <img src="https://source.unsplash.com/random/200x200" className="mt-5" />
+    <div className="w-screen h-screen flex justify-center items-center">
+      <CustomButton label="Clique aqui" onClick={handleButton1} />
+      <CustomButton label="Clique aqui" onClick={handleButton2} />
+      <CustomButton label="Clique aqui" onClick={handleButton3} />
     </div>
-
   );
 }
 
