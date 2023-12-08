@@ -1,18 +1,20 @@
 "use client"
 
-import { CustomButton } from "./components/CustomButton";
+import { useState } from "react";
+
+//import { CustomButton } from "./components/CustomButton";
 
 const Page = () => {
+  const [ count, setCount ] = useState<number>(10);
 
-  const handleButton1 = () => alert('Clicou no botão 1');
-  const handleButton2 = () => alert('Clicou no botão 2');
-  const handleButton3 = () => alert('Clicou no botão 3');
+  const handleClickButton = () => {
+
+  }
   
   return(
-    <div className="w-screen h-screen flex justify-center items-center">
-      <CustomButton label="Clique aqui" onClick={handleButton1} />
-      <CustomButton label="Clique aqui" onClick={handleButton2} />
-      <CustomButton label="Clique aqui" onClick={handleButton3} />
+    <div className="w-screen h-screen flex flex-col justify-center items-center text-3xl">
+      <p>{count}</p>
+      <button onClick={handleClickButton} className="bg-blue-500 p-3" > +1  </button>
     </div>
   );
 }
