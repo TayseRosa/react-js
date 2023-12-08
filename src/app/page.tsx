@@ -8,7 +8,7 @@ const Page = () => {
   const [ count, setCount ] = useState<number>(10);
 
   const handleClickButton = () => {
-
+    setCount(count +1)
   }
   
   return(
