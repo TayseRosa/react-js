@@ -21,13 +21,13 @@ const Page = () => {
 
   return(
     <div className="w-screen h-screen flex flex-col justify-center items-center text-3xl bg-[#31353d] ">
-      <div className="text-purple-400 mb-5 text-4xl"> 💜 Atualizando Objeto em States 💜 </div>
+      <div className="text-purple-400 mb-5 text-4xl"> 💜 Updating Object in States - React JS 💜 </div>
         <div className="flex flex-col">
           <input 
             type="text"
             placeholder="Name"
             className="border border-black p-3 text-2xl text-black rouded-md mb-3"
-            value={fullName.name}
+            value={fullName.name} 
             onChange={ e=> setFullName({ ...fullName, name: e.target.value })}
           />
 
