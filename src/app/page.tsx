@@ -7,6 +7,18 @@ const Page = () => {
   
   const [ fullName, setFullName ] = useState<Person2>({name:'', lastName:''})
 
+  const limparNome = () => {
+    setFullName({ ...fullName, name:'' })
+  }
+
+  const limparSobrenome = () => {
+    setFullName({ ...fullName, lastName:'' })
+  }
+
+  const limparCompleto = () => {
+    setFullName({ name:'', lastName:'' })
+  }
+
   return(
     <div className="w-screen h-screen flex flex-col justify-center items-center text-3xl">
       <input 
@@ -27,6 +39,10 @@ const Page = () => {
 
       <p>My full name is:</p>
       <p> {fullName.name}  {fullName.lastName} </p>
+
+      <button onClick={limparNome} className="bg-red-500 p-4 rounded-xl mt-3" > Clear name </button>
+      <button onClick={limparSobrenome} className="bg-blue-500 p-4 rounded-xl mt-3" > Clear last name </button>
+      <button onClick={limparCompleto} className="bg-green-500 p-4 rounded-xl mt-3" > Clear full name </button>
       
       <div className="w-screen flex flex-row justify-center items-center mt-40 text-2xl text-purple-400"> Developed with 💜 by <a href="https://www.github.com/tayserosa" target="_blank"> <img src="https://github.com/tayserosa.png" width={40} alt="Tayse CODE Rosa"className="ml-2" /> </a> </div>
     </div>
