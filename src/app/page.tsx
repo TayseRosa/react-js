@@ -20,7 +20,7 @@ const Page = () => {
   }
 
   return(
-    <div className="w-screen h-screen flex flex-col justify-center items-center text-3xl">
+    <div className="w-screen h-screen flex flex-col justify-center items-center text-3xl bg-[#31353d] ">
       <input 
         type="text"
         placeholder="Name"
