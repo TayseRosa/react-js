@@ -13,11 +13,21 @@ const Page = () => {
   ]);
 
   const handleAddButton = () => {
+    //Verifica se nao esta vazio
+    if(itemInput.trim() === '' ) return;
+
     setList([
       ...list,//cópia do array
       { label: itemInput, checked:false },//add new item
     ]);
     setItemInput('')
+  }
+
+  const deleteItem = (index:number) => {
+    //alert('Deletando item: ' + index)
+    //Quando o key fofr diferente do index, retorna false e neste caso "DELETA"
+    const newList = list.filter( (item, key) => key !== index )
+    setList(newList);
   }
 
   return(
@@ -42,8 +52,8 @@ const Page = () => {
       <p className="mb-4 text-yellow-500"> { list.length } itens na lista </p>
 
       <ul className="flex flex-col">
-        {list.map(item=>(
-          <li> {item.label} - <button className="hover:underline"> [Deletar] </button> </li>
+        {list.map((item, index)=>(
+          <li key={index}> {item.label} - <button onClick={() => deleteItem(index)} className="hover:underline"> [Deletar] </button> </li>
         ))}
       </ul>
       
