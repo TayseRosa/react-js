@@ -8,8 +8,8 @@ const Page = () => {
   const [ itemInput, setItemInput ] = useState('')
   const [ list, setList ] = useState<ToDoItem[]>([
     {label:'Comprar ovo', checked:true},
-    {label:'Comprar pão', checked:true},
-    {label:'Comprar leite', checked:true}
+    {label:'Comprar pão', checked:false},
+    {label:'Comprar leite', checked:false}
   ]);
 
   const handleAddButton = () => {
@@ -21,6 +21,21 @@ const Page = () => {
       { label: itemInput, checked:false },//add new item
     ]);
     setItemInput('')
+  }
+
+  const toggleItem = (index:number) => {
+    let newList = [...list]
+
+    //alert('Teste' + index) 
+    for(let i in list){
+      if( index === parseInt(i) ){
+        newList[i].checked = !newList[i].checked
+      }
+    }
+    setList(newList)
+    
+    
+
   }
 
   const deleteItem = (index:number) => {
@@ -53,14 +68,20 @@ const Page = () => {
 
       <ul className="flex flex-col">
         {list.map((item, index)=>(
-          <li key={index}> {item.label} - <button onClick={() => deleteItem(index)} className="hover:underline"> [Deletar] </button> </li>
+          <li key={index}> 
+          <input 
+            type="checkbox" 
+            onClick={ ()=>toggleItem(index) }
+            checked={item.checked}
+            className="w-6 h-6 mr-3"
+          ></input>
+            {item.label} - <button onClick={() => deleteItem(index)} className="hover:underline"> [Deletar] </button> </li>
         ))}
       </ul>
       
       <div className="w-screen flex justify-center items-center mt-40 text-2xl text-purple-400"> 
         <a href="https://www.github.com/tayserosa" target="_blank" className="flex" > 
-          Developed with 💜 by  
-          <img src="https://github.com/tayserosa.png" width={40} alt="Tayse CODE Rosa" className="pl-3"/>  
+          Developed with 💜 by  Tayse Rosa
         </a> 
       </div>
     </div>
