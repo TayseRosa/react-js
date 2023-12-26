@@ -7,9 +7,9 @@ const Page = () => {
 
   const [ itemInput, setItemInput ] = useState('')
   const [ list, setList ] = useState<ToDoItem[]>([
-    {label:'Comprar ovo', checked:true},
-    {label:'Comprar pão', checked:false},
-    {label:'Comprar leite', checked:false}
+    {id:1, label:'Comprar ovo', checked:true},
+    {id:2, label:'Comprar pão', checked:false},
+    {id:3, label:'Comprar leite', checked:false}
   ]);
 
   const handleAddButton = () => {
@@ -18,30 +18,28 @@ const Page = () => {
 
     setList([
       ...list,//cópia do array
-      { label: itemInput, checked:false },//add new item
+      { id:list.length + 1,label: itemInput, checked:false },//add new item
     ]);
     setItemInput('')
   }
 
-  const toggleItem = (index:number) => {
+  const toggleItem = (id:number) => {
     let newList = [...list]
 
     //alert('Teste' + index) 
-    for(let i in list){
-      if( index === parseInt(i) ){
+    for(let i in newList){
+      if(newList[i].id === id){
         newList[i].checked = !newList[i].checked
       }
     }
+     
     setList(newList)
-    
-    
-
   }
 
-  const deleteItem = (index:number) => {
+  const deleteItem = (id:number) => {
     //alert('Deletando item: ' + index)
-    //Quando o key fofr diferente do index, retorna false e neste caso "DELETA"
-    const newList = list.filter( (item, key) => key !== index )
+    //Quando o key for diferente do index, retorna false e neste caso "DELETA"
+    const newList = list.filter( item => item.id !== id )
     setList(newList);
   }
 
@@ -67,15 +65,15 @@ const Page = () => {
       <p className="mb-4 text-yellow-500"> { list.length } itens na lista </p>
 
       <ul className="flex flex-col">
-        {list.map((item, index)=>(
-          <li key={index}> 
+        {list.map(item=>(
+          <li key={item.id}> 
           <input 
             type="checkbox" 
-            onClick={ ()=>toggleItem(index) }
+            onClick={ ()=>toggleItem(item.id) }
             checked={item.checked}
             className="w-6 h-6 mr-3"
           ></input>
-            {item.label} - <button onClick={() => deleteItem(index)} className="hover:underline"> [Deletar] </button> </li>
+            {item.label} - <button onClick={() => deleteItem(item.id)} className="hover:underline"> [Deletar] </button> </li>
         ))}
       </ul>
       
