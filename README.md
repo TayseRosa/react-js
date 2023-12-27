@@ -11,6 +11,7 @@
 <img src="greeting.png" />
 <img src="atualizandoObjetosEmStates.png" />
 <img src="todoList.png" />
+<img src="galeria.png" />
 
 
 ## 🚀 Getting Started
