@@ -13,6 +13,7 @@
 <img src="todoList.png" />
 <img src="galeria.png" />
 <img src="quiz.png" />
+<img src="effectVideo.png" />
 
 
 ## 🚀 Getting Started
